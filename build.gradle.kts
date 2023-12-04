@@ -1,11 +1,11 @@
 plugins {
-    kotlin("multiplatform") version "1.8.20"
-    kotlin("plugin.serialization") version "1.8.20"
+    kotlin("multiplatform") version "1.9.20"
+    kotlin("plugin.serialization") version "1.9.20"
     id("maven-publish")
 }
 
-group = "pw.vodes"
-version = "0.2"
+group = "moe.styx"
+version = "0.3"
 
 repositories {
     mavenCentral()
@@ -35,5 +35,5 @@ kotlin {
 }
 
 dependencies {
-    commonMainImplementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
+    commonMainApi("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.1")
 }

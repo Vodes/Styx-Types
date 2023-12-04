@@ -22,3 +22,7 @@ data class Device(
     var GUID: String, var userID: String, var name: String, var deviceInfo: DeviceInfo,
     var lastUsed: Long, var accessToken: String, var watchToken: String, var refreshToken: String, var tokenExpiry: Long
 )
+
+fun UnregisteredDevice.toDevice(userID: String, name: String): Device {
+    return Device(GUID, userID, name, deviceInfo, -1, "", "", "", -1)
+}
