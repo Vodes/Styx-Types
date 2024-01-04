@@ -57,6 +57,7 @@ data class DownloadableOption(
     val episodeOffset: Int? = 0,
     val ignoreDelay: Boolean = false,
     val waitForPrevious: Boolean = false,
+    val addToLegacyDatabase: Boolean = false,
     val overrideNamingTemplate: String? = null,
     val overrideTitleTemplate: String? = null,
     val processingOptions: ProcessingOptions? = null,
