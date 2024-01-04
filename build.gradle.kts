@@ -1,11 +1,11 @@
 plugins {
-    kotlin("multiplatform") version "1.9.20"
-    kotlin("plugin.serialization") version "1.9.20"
+    kotlin("multiplatform") version "1.9.21"
+    kotlin("plugin.serialization") version "1.9.21"
     id("maven-publish")
 }
 
 group = "moe.styx"
-version = "0.3"
+version = "0.4"
 
 repositories {
     mavenCentral()
@@ -15,6 +15,7 @@ kotlin {
     jvm {
         jvmToolchain(11)
         withJava()
+        withSourcesJar()
     }
     val hostOs = System.getProperty("os.name")
     val isMingwX64 = hostOs.startsWith("Windows")
@@ -35,5 +36,5 @@ kotlin {
 }
 
 dependencies {
-    commonMainApi("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.1")
+    commonMainApi("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
 }
