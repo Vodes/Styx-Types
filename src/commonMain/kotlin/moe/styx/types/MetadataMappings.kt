@@ -16,7 +16,7 @@ interface IMapping {
     val matchFrom: Double
     val matchUntil: Double
     val remoteID: Int
-    val offset: Double?
+    val offset: Double
 }
 
 
@@ -25,7 +25,7 @@ data class BasicMapping(
     override var matchFrom: Double = -1.0,
     override var matchUntil: Double = -1.0,
     override var remoteID: Int = 0,
-    override var offset: Double? = null
+    override var offset: Double = 0.0
 ) : IMapping
 
 @Serializable
@@ -36,7 +36,7 @@ data class TMDBMapping(
     var seasonEntry: Int = 1,
     var orderType: TMDBOrder? = null,
     var orderID: String? = null,
-    override var offset: Double? = null
+    override var offset: Double = 0.0
 ) : IMapping
 
 
