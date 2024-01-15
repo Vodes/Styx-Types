@@ -13,10 +13,10 @@ enum class TMDBOrder(val type: Int, val title: String) {
 }
 
 interface IMapping {
-    val matchFrom: Double
-    val matchUntil: Double
-    val remoteID: Int
-    val offset: Double
+    var matchFrom: Double
+    var matchUntil: Double
+    var remoteID: Int
+    var offset: Double
 }
 
 
