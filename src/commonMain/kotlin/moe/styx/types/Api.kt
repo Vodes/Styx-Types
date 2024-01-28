@@ -64,7 +64,7 @@ data class ClientHeartbeat(val token: String, val mediaActivity: MediaActivity? 
 @Serializable
 data class ActiveUser(
     val user: User,
-    val deviceID: String? = null,
+    val deviceID: String,
     val deviceType: String,
     val lastPing: Long? = null,
     val mediaActivity: MediaActivity? = null,
