@@ -46,10 +46,18 @@ data class MediaActivity(val mediaEntry: String, val time: Long, val playing: Bo
  * Data type used for the online user list in clients.
  *
  * @param user User class carrying various information that might be useful
+ * @param deviceID Device ID. The clients don't really need this, but it's useful in the database.
  * @param deviceType Usually some form of "PC" or "Phone"
  * @param lastPing Unix Timestamp for the last received ping
  * @param mediaActivity Current Media being played. Can be null.
  * @param listeningTo If the user is "listening" to another user's playback, this will have an ID. (For group-watch)
  */
 @Serializable
-data class ActiveUser(val user: User, val deviceType: String, val lastPing: Long?, val mediaActivity: MediaActivity?, val listeningTo: String?)
+data class ActiveUser(
+    val user: User,
+    val deviceID: String? = null,
+    val deviceType: String,
+    val lastPing: Long? = null,
+    val mediaActivity: MediaActivity? = null,
+    val listeningTo: String? = null
+)
