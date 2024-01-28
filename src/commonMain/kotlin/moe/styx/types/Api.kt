@@ -43,6 +43,15 @@ enum class LogType {
 data class MediaActivity(val mediaEntry: String, val time: Long, val playing: Boolean)
 
 /**
+ * Data type that the client will be sending every few seconds.
+ *
+ * @param token Current login token representing the user and device
+ * @param mediaActivity Current media activity if anything is playing/opened. Otherwise null.
+ */
+@Serializable
+data class ClientHeartbeat(val token: String, val mediaActivity: MediaActivity? = null)
+
+/**
  * Data type used for the online user list in clients.
  *
  * @param user User class carrying various information that might be useful
