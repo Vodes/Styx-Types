@@ -47,9 +47,10 @@ data class MediaActivity(val mediaEntry: String, val time: Long, val playing: Bo
  *
  * @param token Current login token representing the user and device
  * @param mediaActivity Current media activity if anything is playing/opened. Otherwise null.
+ * @param listeningTo If the user is "listening" to another user's playback, this will have an ID. (For group-watch)
  */
 @Serializable
-data class ClientHeartbeat(val token: String, val mediaActivity: MediaActivity? = null)
+data class ClientHeartbeat(val token: String, val mediaActivity: MediaActivity? = null, val listeningTo: String? = null)
 
 /**
  * Data type used for the online user list in clients.
