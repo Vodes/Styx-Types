@@ -27,5 +27,8 @@ fun UnregisteredDevice.toDevice(userID: String, name: String): Device {
     return Device(GUID, userID, name, deviceInfo, -1, "", "", "", -1)
 }
 
+@Serializable
 data class QueuedFavChanges(var toAdd: MutableList<Favourite> = mutableListOf(), val toRemove: MutableList<Favourite> = mutableListOf())
+
+@Serializable
 data class QueuedWatchedChanges(var toUpdate: MutableList<MediaWatched> = mutableListOf(), val toRemove: MutableList<MediaWatched> = mutableListOf())
