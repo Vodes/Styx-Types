@@ -26,7 +26,7 @@ data class ApiResponse(var code: Int, var message: String?, var silent: Boolean 
 
 
 @Serializable
-data class Log(val userID: String, val deviceID: String, val type: LogType, val content: String?, val time: Long?)
+data class Log(val userID: String, val deviceID: String, val type: LogType, val content: String?, val time: Long)
 
 enum class LogType {
     LOGIN, LOGOUT, WATCH, OTHER
