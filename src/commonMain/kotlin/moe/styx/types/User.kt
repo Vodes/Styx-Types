@@ -11,7 +11,7 @@ data class User(
 @Serializable
 data class DeviceInfo(
     val type: String, val name: String?, val model: String?, val cpu: String?, val gpu: String?,
-    val os: String, val osVersion: String?, var jvm: String?, var jvmVersion: String?
+    val os: String, val osVersion: String?, var jvm: String?, var jvmVersion: String?, val appSecret: String
 )
 
 @Serializable

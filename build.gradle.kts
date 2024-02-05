@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "moe.styx"
-version = "0.5"
+version = "0.6"
 
 repositories {
     mavenCentral()
@@ -26,7 +26,7 @@ kotlin {
         else -> throw GradleException("Host OS is not supported in Kotlin/Native.")
     }
 
-    
+
     sourceSets {
         val commonMain by getting
         // apparently you don't want these if you only have common code
