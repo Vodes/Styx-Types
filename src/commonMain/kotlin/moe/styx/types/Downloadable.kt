@@ -32,7 +32,7 @@ enum class SourceType {
 data class ProcessingOptions(
     val keepVideoOfPrevious: Boolean = false,
     val keepAudioOfPrevious: Boolean = false,
-    val keepBetterAudio: Boolean = true,
+    val keepBetterAudio: Boolean = false,
     val manualAudioSync: Long = 0,
     val manualSubSync: Long = 0,
     val removeNewSubs: Boolean = false,
