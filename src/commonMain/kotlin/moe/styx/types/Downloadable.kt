@@ -73,7 +73,7 @@ data class DownloadableOption(
 data class DownloaderTarget(
     val mediaID: String,
     var options: MutableList<DownloadableOption> = mutableListOf(),
-    val namingTemplate: String = "%release_group_b% %english% - S01%episode_number_e%",
-    val titleTemplate: String = "%english% - S01%episode_number_e%",
-    val outputDir: String = "/var/Anime/2023/%english%"
+    val namingTemplate: String = "%group_b% %english% - S01%ep_e%",
+    val titleTemplate: String = "%english% - S01%ep_e%",
+    val outputDir: String = "/var/Anime/2024/%english%"
 )
